@@ -18,8 +18,8 @@ MonoBehaviour:
   ingredientDislikes: 4
   skillOffer: 6
   skillNeeded: 1
-  st01_ingredientText: Hi there! Havest has been crazy this year, so I have many
-    leftover carrots for you.
+  st01_ingredientText: Hi there! I have many leftover carrots for you, cause I got
+    too many from the market.
   st01_ingredientDislikeText: One thing I really dislike, is beetroots. I'm not rooting
     for that beet.
   st01_skillOfferText: 'I learned a lot about being a parent through the years. '

@@ -12,19 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca9474022bc9914f8fc083134e7fcaa, type: 3}
   m_Name: Peeper06
   m_EditorClassIdentifier: Assembly-CSharp::Peeper
-  name: Polina
+  name: Po and Lina
   defaultMaterial: {fileID: 2100000, guid: 6026d4d8c7409a642b93bf1b98c343e7, type: 2}
   ingredient: 3
   ingredientDislikes: 2
-  skillOffer: 6
-  skillNeeded: 1
-  st01_ingredientText: Hello! I am bringing ingredient_06
-  st01_ingredientDislikeText: oh, thanks for asking. I really dislike ingredient
-    02.
-  st01_skillOfferText: You are asking what I do in my free time? I am really good
-    at skill 06
-  st01_skillNeedText: You know, lately I had a problem with skill 01
-  st03_soupResultText: Oh wow! This soup is delicious. I especially like soup
-  st03_skillOfferText: I can help you with the problem you have with my skill 06
-  st03_skillNeedText: The soup is great, but I have a huge issue where skill 01 would
-    be convenient.
+  skillOffer: 2
+  skillNeeded: 6
+  st01_ingredientText: "Hey, Po and I just stubled upon on your kitchen. Can we stay
+    for a bit?\t"
+  st01_ingredientDislikeText: But I don't like aubergines. And Lina doesn't like
+    aubergines. So none of those, please.
+  st01_skillOfferText: We are just around. So we do a little bit of this and a little
+    bit of that. But only after school.
+  st01_skillNeedText: 'Lina had a big fight with our parent this morning. I don''t
+    know how to make it better. Our birthday is in a week, we need to make up. '
+  st03_soupResultText: The veggies mixed well together, thank you!
+  st03_skillOfferText: We are around, so we can feed the kitties. Maybe even give
+    them a little pet!
+  st03_skillNeedText: We had a fight with our parents about our birthday party. Adult
+    think it is really that hard to get 2 ponnies for us?

@@ -18,14 +18,14 @@ MonoBehaviour:
   ingredientDislikes: 5
   skillOffer: 5
   skillNeeded: 4
-  st01_ingredientText: 'Hii! So here are some beets. My dad got too many from the
-    market. '
-  st01_ingredientDislikeText: 
-  st01_skillOfferText: You are asking what I do in my free time? I am really good
-    at skill 04
-  st01_skillNeedText: You know, lately I had a problem with skill 05
-  st03_soupResultText: Oh wow! This soup is delicious. I especially like how mild
-    it is
-  st03_skillOfferText: I can help you with the problem you have with my skill 04
-  st03_skillNeedText: The soup is great, but I have a huge issue where skill 05 would
-    be convenient.
+  st01_ingredientText: 'Hey, so here are some beets. My dad harvested too many this
+    year. '
+  st01_ingredientDislikeText: ' I have no potato in my soup. So don''t try any tricks...'
+  st01_skillOfferText: My dad has all sorts of things in his farming shed. Like tools
+    and such...
+  st01_skillNeedText: 'I just split up with my partner... The new apartment is waiting
+    for me, so I need help with moving my things. '
+  st03_soupResultText: 'The beets really bring out the flavour... '
+  st03_skillOfferText: There should be a strong enough tool in my dad's shed...
+  st03_skillNeedText: 'All my things are packed, but they still need to be moved
+    to the new appartment. Who can drive me though the whole city? '
