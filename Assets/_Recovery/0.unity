@@ -916,7 +916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   uiManager: {fileID: 1197004043}
-  disableTutorial: 1
+  disableTutorial: 0
 --- !u!1 &708284030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,7 +1326,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1075576308
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1481,7 +1481,7 @@ MonoBehaviour:
   m_tutorialText: {fileID: 1411953679}
   m_tutorialBack: {fileID: 317669539}
   m_tutorialNext: {fileID: 928470409}
-  m_tutorialStartGame: {fileID: 2074075610}
+  m_tutorialStartGame: {fileID: 0}
   m_tutorialImage: {fileID: 943553175}
 --- !u!1 &1279439640
 GameObject:
