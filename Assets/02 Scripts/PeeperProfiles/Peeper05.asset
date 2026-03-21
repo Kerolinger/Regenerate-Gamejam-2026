@@ -16,16 +16,18 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: e7f87441ff14a2d4081aee990ba580f9, type: 2}
   ingredient: 6
   ingredientDislikes: 0
-  skillOffer: 
-  skillNeeded: 6
-  st01_ingredientText: Hello! I am bringing ingredient_05
-  st01_ingredientDislikeText: oh, thanks for asking. I really dislike ingredient
-    04.
-  st01_skillOfferText: You are asking what I do in my free time? I am really good
-    at skill 05
-  st01_skillNeedText: You know, lately I had a problem with skill 06
-  st03_soupResultText: Oh wow! This soup is delicious. I especially like eating with
-    all of you together
-  st03_skillOfferText: I can help you with the problem you have with my skill 05
-  st03_skillNeedText: The soup is great, but I have a huge issue where skill 06 would
-    be convenient.
+  skillOffer: 1
+  skillNeeded: 5
+  st01_ingredientText: 'Morning, some chillies for you?. To add the heat to the dish,
+    you know. '
+  st01_ingredientDislikeText: I could eat anything really, you know.
+  st01_skillOfferText: I loved spending time with my nieces, now they are all grown
+    up. I'm good with children, you know.
+  st01_skillNeedText: 'I want to put up this shelf, you know. But I need an extra
+    durable drill, the walls are just too tough.  '
+  st03_soupResultText: The spice, the flavour, the love. This soup is just what I
+    needed.
+  st03_skillOfferText: 'I''m really good with children, you know. We''ll have a good
+    time. '
+  st03_skillNeedText: 'I need to put a shelf for my new books, but I need an extra
+    durable drill. The walls are just too tough, you know. '
