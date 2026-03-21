@@ -6,8 +6,11 @@ public class Peeper : ScriptableObject
     [Header("Basic Information")]
     [SerializeField] private string name;
     [SerializeField] private Sprite defaultSprite;
+    [Space]
     [SerializeField] private Ingredients ingredient = Ingredients.none;
     [SerializeField] private Ingredients[] ingredientDislikes;
+    [SerializeField] private Skills skillOffer = Skills.none;
+    [SerializeField] private Skills skillNeeded = Skills.none;
 
     [Header("Narrative Bits - Stage 01")]
     [SerializeField] [TextArea (2,2)] private string st01_ingredientText;

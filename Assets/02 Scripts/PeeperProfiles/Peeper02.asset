@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Peeper
   name: Mascha
   defaultSprite: {fileID: 0}
-  ingredient: 0
-  ingredientDislikes: 
-  st01_ingredientText: Hello! I am bringing ingredient_0
+  ingredient: 2
+  ingredientDislikes: 06000000
+  skillOffer: 2
+  skillNeeded: 3
+  st01_ingredientText: Hello! I am bringing ingredient_02
   st01_skillOfferText: You are asking what I do in my free time? I am really good
-    at
-  st01_skillNeedText: You know, lately I had a problem with
-  st03_soupResultText: Oh wow! This soup is delicious. I especially like
-  st03_skillOfferText: I can heko you with the problem you have
-  st03_skillNeedText: 
+    at skill 02
+  st01_skillNeedText: You know, lately I had a problem with skill 03
+  st03_soupResultText: Oh wow! This soup is delicious. I especially like that its
+    not a lasagna
+  st03_skillOfferText: I can help you with the problem you have with my skill 02
+  st03_skillNeedText: The soup is great, but I have a huge issue where skill 03 would
+    be convenient.

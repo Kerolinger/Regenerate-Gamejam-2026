@@ -15,11 +15,15 @@ MonoBehaviour:
   name: Thomas
   defaultSprite: {fileID: 0}
   ingredient: 1
-  ingredientDislikes: 
-  st01_ingredientText: Hello! I am bringing ingredient_0
+  ingredientDislikes: 01000000
+  skillOffer: 1
+  skillNeeded: 2
+  st01_ingredientText: Hello! I am bringing ingredient_01.
   st01_skillOfferText: You are asking what I do in my free time? I am really good
-    at
-  st01_skillNeedText: You know, lately I had a problem with
-  st03_soupResultText: Oh wow! This soup is delicious. I especially like
-  st03_skillOfferText: I can heko you with the problem you have
-  st03_skillNeedText: 
+    at skill 01.
+  st01_skillNeedText: You know, lately I had a problem with skill 02.
+  st03_soupResultText: Oh wow! This soup is delicious. I especially like how spicy
+    it is.
+  st03_skillOfferText: I can help you with the problem you have with my skill 01
+  st03_skillNeedText: The soup is great, but I have a huge issue where skill 02 would
+    be convenient.

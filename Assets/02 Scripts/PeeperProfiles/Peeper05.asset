@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Peeper
   name: Caro
   defaultSprite: {fileID: 0}
-  ingredient: 0
-  ingredientDislikes: 
-  st01_ingredientText: Hello! I am bringing ingredient_0
+  ingredient: 5
+  ingredientDislikes: 04000000
+  skillOffer: 5
+  skillNeeded: 6
+  st01_ingredientText: Hello! I am bringing ingredient_05
   st01_skillOfferText: You are asking what I do in my free time? I am really good
-    at
-  st01_skillNeedText: You know, lately I had a problem with
-  st03_soupResultText: Oh wow! This soup is delicious. I especially like
-  st03_skillOfferText: I can heko you with the problem you have
-  st03_skillNeedText: 
+    at skill 05
+  st01_skillNeedText: You know, lately I had a problem with skill 06
+  st03_soupResultText: Oh wow! This soup is delicious. I especially like eating with
+    all of you together
+  st03_skillOfferText: I can help you with the problem you have with my skill 05
+  st03_skillNeedText: The soup is great, but I have a huge issue where skill 06 would
+    be convenient.
