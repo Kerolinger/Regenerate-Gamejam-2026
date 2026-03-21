@@ -55,6 +55,7 @@ public class UIManager : MonoBehaviour
     private PeeperProfile currentPeeper;
 
     public GameObject StageThreeContainer { get => m_StageThreeContainer; set => m_StageThreeContainer = value; }
+    public TextMeshProUGUI StageTwoNotes { get => m_stageTwoNotes; set => m_stageTwoNotes = value; }
 
     public enum ConversationFlow {introduction, intro_answer, intro_goodbye };
 
@@ -253,15 +254,7 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void BTN_HoverOverINIngredient()
-    {
 
-    }
-
-    public void BTN_HoverOverOutIngredient()
-    {
-
-    }
 
 
 }
