@@ -1935,6 +1935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4fb60728921c94e95bba5522f00609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  thisisrealthisisme: 10
   currentCamera: {fileID: 0}
   uiManager: {fileID: 1197004043}
   peepers:
@@ -5135,7 +5136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2043186019
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5728,6 +5729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraRotator
   speed: 1
   st01_camera: {fileID: 7189340142712201348}
+  maxRotAngle: 45
 --- !u!1001 &8336278371676432203
 PrefabInstance:
   m_ObjectHideFlags: 0

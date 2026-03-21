@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class CameraRotator : MonoBehaviour
 {
     //<>
+
     [SerializeField] private float speed;
     [SerializeField] private Transform st01_camera;
     [SerializeField] private int maxRotAngle =45;

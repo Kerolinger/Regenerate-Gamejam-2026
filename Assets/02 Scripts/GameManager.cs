@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
+    public int thisisrealthisisme;
 
     public Transform currentCamera;
 
@@ -141,13 +142,15 @@ public class GameManager : MonoBehaviour
 
     private Vector2 mousePosition;
 
-    //private void Update()
-    //{
-    //   Debug.Log( Mouse.current.position.ReadValue());
-    //    if (!enableHandMovement)
-    //        return;
+    private void Update()
+    {
 
-    //    var mousePos = currentCameraCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-    //    handTransform.position = new Vector3(mousePos.x, 0 ,mousePos.y);
-    //}
+        if (!enableHandMovement)
+            return;
+
+        var mousePos = Mouse.current.position.ReadValue();
+        handTransform.position = currentCameraCamera.ScreenToWorldPoint(new Vector3(mousePos.x, 0, 2));
+        Debug.Log(Mouse.current.position.ReadValue() + "//" + mousePos);
+        //handTransform.position = new Vector3(mousePos.x, 0, mousePos.y);
+    }
 }
