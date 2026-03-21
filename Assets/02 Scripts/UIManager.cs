@@ -32,6 +32,10 @@ public class UIManager : MonoBehaviour
     [Header("Stage Two UI References")]
 
     [SerializeField] private GameObject m_StageTwoContainer;
+    [SerializeField] private TextMeshProUGUI m_stageTwoNotes;
+
+    [Header("Stage three References (help me)")]
+    [SerializeField] private GameObject m_StageThreeContainer;
 
     [Space]
     [Header("Other References")]
@@ -44,6 +48,8 @@ public class UIManager : MonoBehaviour
 
 
     private PeeperProfile currentPeeper;
+
+    public GameObject StageThreeContainer { get => m_StageThreeContainer; set => m_StageThreeContainer = value; }
 
     public enum ConversationFlow {introduction, intro_answer, intro_goodbye };
 
@@ -185,8 +191,8 @@ public class UIManager : MonoBehaviour
     public void BTN_StartStage02()
     {
         m_Stage02Button.SetActive(false);
+        m_StageTwoContainer.SetActive(true);
         gameManager.SwitchStage(2);
-
     }
 
 }

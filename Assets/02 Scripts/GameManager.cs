@@ -1,5 +1,6 @@
 using DG.Tweening;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -26,12 +27,18 @@ public class GameManager : MonoBehaviour
     private GameObject currentPeeper;
     private Camera currentCameraCamera;
 
+    public StageTwoManager stageTwomanager;
+
     public GameStage CurrentGameStage { get => currentGameStage; set => currentGameStage = value; }
+    public IngredientInfo[] Ingredients { get => ingredients; set => ingredients = value; }
 
     public enum GameStage { stage01, stage02, stage03};
 
     private bool enableHandMovement;
 
+    private GameObject currentIngredient;
+
+    private List<IngredientInfo> CurrentSoup;
 
     private void Start()
     {
@@ -39,6 +46,7 @@ public class GameManager : MonoBehaviour
             uiManager.PlayTutorial();
 
         SwitchStage(1);
+        CurrentSoup = new List<IngredientInfo>();
     }
 
     private IEnumerator StartPeeperEncounterRoutine()
@@ -48,6 +56,11 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(Random.Range(1, 1.5f));
 
         StartPeeperEncounter();
+    }
+
+    public void SetIngredient(GameObject gameobject)
+    {
+        currentIngredient = gameobject;
     }
 
     private void StartPeeperEncounter()
@@ -84,25 +97,41 @@ public class GameManager : MonoBehaviour
         switch(i)
         {
             case PeeperProfile.Ingredients.carrot:
-                return ingredients[0].DisplayedIngredientMaterial;
+                return Ingredients[0].DisplayedIngredientMaterial;
 
             case PeeperProfile.Ingredients.aubergine:
-                return ingredients[1].DisplayedIngredientMaterial;
+                return Ingredients[1].DisplayedIngredientMaterial;
 
             case PeeperProfile.Ingredients.chickpeas:
-                return ingredients[2].DisplayedIngredientMaterial;
+                return Ingredients[2].DisplayedIngredientMaterial;
 
             case PeeperProfile.Ingredients.beetroot:
-                return ingredients[3].DisplayedIngredientMaterial;
+                return Ingredients[3].DisplayedIngredientMaterial;
 
             case PeeperProfile.Ingredients.potato:
-                return ingredients[4].DisplayedIngredientMaterial;
+                return Ingredients[4].DisplayedIngredientMaterial;
 
             case PeeperProfile.Ingredients.chilli:
-                return ingredients[5].DisplayedIngredientMaterial;
+                return Ingredients[5].DisplayedIngredientMaterial;
         }
 
         return null;
+    }
+
+    public void AddIngredientToPot(int ingredientIndex)
+    {
+        CurrentSoup.Add(ingredients[ingredientIndex]);
+
+        if (CurrentSoup.Count > 1)
+        {
+            stageTwomanager.cookSoupButton.SetActive(true);
+        }
+    }
+
+    public void ResetSoup()
+    {
+        CurrentSoup.Clear();
+        stageTwomanager.cookSoupButton.SetActive(false);
     }
 
     public void SwitchStage(int newStageindex)
@@ -136,6 +165,16 @@ public class GameManager : MonoBehaviour
                 break;
             case 3:
                 CurrentGameStage = GameStage.stage03;
+                currentCamera = cameraTransforms[0];
+                currentCameraCamera = currentCamera.GetComponentInChildren<Camera>();
+                cameraTransforms[0].gameObject.SetActive(false);
+                cameraTransforms[1].gameObject.SetActive(true);
+
+                enableHandMovement = false;
+                handTransform.gameObject.SetActive(false);
+
+                uiManager.StageThreeContainer.SetActive(true);
+
                 break;
         }
     }
@@ -149,8 +188,7 @@ public class GameManager : MonoBehaviour
             return;
 
         var mousePos = Mouse.current.position.ReadValue();
-        handTransform.position = currentCameraCamera.ScreenToWorldPoint(new Vector3(mousePos.x, 0, 2));
-        Debug.Log(Mouse.current.position.ReadValue() + "//" + mousePos);
-        //handTransform.position = new Vector3(mousePos.x, 0, mousePos.y);
+        var camPos = currentCameraCamera.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 2));
+        handTransform.position = new Vector3(camPos.x, 0, camPos.z);
     }
 }
