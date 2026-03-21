@@ -253,4 +253,15 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void BTN_HoverOverINIngredient()
+    {
+
+    }
+
+    public void BTN_HoverOverOutIngredient()
+    {
+
+    }
+
+
 }
