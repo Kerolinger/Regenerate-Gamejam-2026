@@ -16,7 +16,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private IngredientInfo[] ingredients;
     [SerializeField] private GameObject peeperPrefab;
     [SerializeField] private Transform[] cameraTransforms;
+    [SerializeField] private Transform[] stageThreeTransforms;
     [SerializeField] private Transform handTransform;
+    [SerializeField] private GameObject stageThreeContainer;
 
     [Header("Ingame Tools")]
     [SerializeField] private bool disableTutorial;
@@ -173,7 +175,8 @@ public class GameManager : MonoBehaviour
     private IEnumerator SetStagethreetiming()
     {
         uiManager.StageThreeContainer.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
+        stageThreeContainer.SetActive(true);
+        yield return new WaitForSeconds(0.7f);
 
         PlacePeople();
         CurrentGameStage = GameStage.stage03;
@@ -193,21 +196,26 @@ public class GameManager : MonoBehaviour
         //potential gästeliste
         List<PeeperProfile> potentialguestlist = new List<PeeperProfile>();
 
-        foreach (PeeperProfile p in peepers)
-            potentialguestlist.Add(p);
+        for (int p = 0; p < peepers.Length; p++)
+        {
+            potentialguestlist.Add(peepers[p]);
 
-        foreach (IngredientInfo i in CurrentSoup)
+            foreach (IngredientInfo i in CurrentSoup)
+                {
 
-    }
+                Debug.Log("Checking if person" + peepers[p].Name + "is coming:" + i.DisplayedIngredient + "/ dislikes" + peepers[p].IngredientDislikes);
 
-    private bool IngredientDislikeCheck()
-    {
-
+                    if (i.DisplayedIngredient == peepers[p].IngredientDislikes)
+                    {
+                        potentialguestlist.Remove(peepers[p]);
+                        stageThreeTransforms[p].gameObject.SetActive(false);
+                    }
+                }
+        }
     }
 
     private void Update()
     {
-
         if (!enableHandMovement)
             return;
 
