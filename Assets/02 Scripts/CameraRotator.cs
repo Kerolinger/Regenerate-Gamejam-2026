@@ -6,14 +6,16 @@ public class CameraRotator : MonoBehaviour
     //<>
     [SerializeField] private float speed;
     [SerializeField] private Transform st01_camera;
+    [SerializeField] private int maxRotAngle =45;
     private bool mouseInputBlocked;
 
+    private float cameraYRotationStartingPosition;
 
     // Update is called once per frame
 
     private void Start()
     {
-        
+        cameraYRotationStartingPosition = st01_camera.eulerAngles.y;
     }
     void Update()
     {
@@ -24,9 +26,9 @@ public class CameraRotator : MonoBehaviour
 
         Debug.Log(st01_camera.eulerAngles.z);
         //if mouse is on the left side, move to the left
-        if (Screen.width / 2 > mouseInput.x && st01_camera.eulerAngles.y > 45f)
+        if (Screen.width / 3 > mouseInput.x && st01_camera.eulerAngles.y > cameraYRotationStartingPosition -45)
             st01_camera.eulerAngles -= speed * new Vector3(0, mouseInput.y, 0) * Time.deltaTime;
-        else if (Screen.width / 2 < mouseInput.x && st01_camera.eulerAngles.y < 170f)
+        else if (Screen.width / 3 *2  < mouseInput.x && st01_camera.eulerAngles.y < cameraYRotationStartingPosition + 45)
             st01_camera.eulerAngles += speed * new Vector3(0, mouseInput.y, 0) *Time.deltaTime;
     }
 

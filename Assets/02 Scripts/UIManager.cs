@@ -52,6 +52,7 @@ public class UIManager : MonoBehaviour
         //currentTextSnippets = new List<string>();
         m_DialogueContainer.SetActive(false);
         m_Stage02Button.SetActive(false);
+        m_StageTwoContainer.SetActive(false);
     }
 
     #region Tutorial

@@ -5618,11 +5618,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 576156258078032345, guid: 8deee78cb44be934d907a869094eee55, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2929170459177641945, guid: 8deee78cb44be934d907a869094eee55, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4351043028620203371, guid: 8deee78cb44be934d907a869094eee55, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5726,7 +5726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b7a7a6fd72c0d4486603021ff2b466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraRotator
-  speed: 0.1
+  speed: 1
   st01_camera: {fileID: 7189340142712201348}
 --- !u!1001 &8336278371676432203
 PrefabInstance:
