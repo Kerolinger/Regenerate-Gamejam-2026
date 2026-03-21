@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Peeper01
   m_EditorClassIdentifier: Assembly-CSharp::Peeper
   name: Thomas
-  defaultSprite: {fileID: 0}
+  defaultMaterial: {fileID: 2100000, guid: 76dac593878452b419b1a1afba2cf9cb, type: 2}
   ingredient: 1
   ingredientDislikes: 01000000
   skillOffer: 1
   skillNeeded: 2
   st01_ingredientText: Hello! I am bringing ingredient_01.
+  st01_ingredientDislikeText: oh, thanks for asking. I really dislike ingredient
+    01. Thats why i am offering it to you in the first place.
   st01_skillOfferText: You are asking what I do in my free time? I am really good
     at skill 01.
   st01_skillNeedText: You know, lately I had a problem with skill 02.

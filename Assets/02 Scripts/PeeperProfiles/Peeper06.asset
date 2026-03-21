@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Peeper06
   m_EditorClassIdentifier: Assembly-CSharp::Peeper
   name: Polina
-  defaultSprite: {fileID: 0}
+  defaultMaterial: {fileID: 2100000, guid: 6026d4d8c7409a642b93bf1b98c343e7, type: 2}
   ingredient: 6
   ingredientDislikes: 02000000
   skillOffer: 6
   skillNeeded: 1
   st01_ingredientText: Hello! I am bringing ingredient_06
+  st01_ingredientDislikeText: oh, thanks for asking. I really dislike ingredient
+    02.
   st01_skillOfferText: You are asking what I do in my free time? I am really good
     at skill 06
   st01_skillNeedText: You know, lately I had a problem with skill 01

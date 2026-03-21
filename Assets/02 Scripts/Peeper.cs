@@ -5,7 +5,7 @@ public class Peeper : ScriptableObject
 {
     [Header("Basic Information")]
     [SerializeField] private string name;
-    [SerializeField] private Sprite defaultSprite;
+    [SerializeField] private Material defaultMaterial;
     [Space]
     [SerializeField] private Ingredients ingredient = Ingredients.none;
     [SerializeField] private Ingredients[] ingredientDislikes;
@@ -14,6 +14,7 @@ public class Peeper : ScriptableObject
 
     [Header("Narrative Bits - Stage 01")]
     [SerializeField] [TextArea (2,2)] private string st01_ingredientText;
+    [SerializeField][TextArea(2, 2)] private string st01_ingredientDislikeText;
     [SerializeField][TextArea(2, 2)] private string st01_skillOfferText;
     [SerializeField][TextArea(2, 2)] private string st01_skillNeedText;
 
