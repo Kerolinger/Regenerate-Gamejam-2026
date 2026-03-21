@@ -16,11 +16,11 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: 632cb32891b433c4d93f49552c8bb90e, type: 2}
   ingredient: 4
   ingredientDislikes: 5
-  skillOffer: 4
-  skillNeeded: 5
-  st01_ingredientText: Hello! I am bringing ingredient_04
-  st01_ingredientDislikeText: oh, thanks for asking. I really dislike ingredient
-    03.
+  skillOffer: 5
+  skillNeeded: 4
+  st01_ingredientText: 'Hii! So here are some beets. My dad got too many from the
+    market. '
+  st01_ingredientDislikeText: 
   st01_skillOfferText: You are asking what I do in my free time? I am really good
     at skill 04
   st01_skillNeedText: You know, lately I had a problem with skill 05
