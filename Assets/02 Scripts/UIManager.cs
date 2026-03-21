@@ -14,6 +14,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject m_tutorialStartGame;
     [SerializeField] private Image m_tutorialImage;
 
+    [Header("Dialoguebox References")]
+
+    [SerializeField] private GameObject m_DialogueContainer;
+    [SerializeField] private TextMeshProUGUI m_DialoguePeeperName;
+    [SerializeField] private TextMeshProUGUI m_DialoguePeeperText;
+    [SerializeField] private GameObject m_DialogueOptionsContainer;
+
     private int currentTutorialslide;
 
     private void Start()
