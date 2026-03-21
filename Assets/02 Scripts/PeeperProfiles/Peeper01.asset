@@ -16,8 +16,8 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: 76dac593878452b419b1a1afba2cf9cb, type: 2}
   ingredient: 1
   ingredientDislikes: 4
-  skillOffer: 06000000
-  skillNeeded: 1
+  skillOffer: 1
+  skillNeeded: 2
   st01_ingredientText: 'Hi there! I have some leftover carrots for you. '
   st01_ingredientDislikeText: 'I really dislike beetroots. Love the beats, but not
     the root kind. '

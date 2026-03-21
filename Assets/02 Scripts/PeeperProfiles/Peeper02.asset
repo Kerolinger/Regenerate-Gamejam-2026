@@ -16,8 +16,8 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: f36d998a3996ef74d9cfe919f8e6e38f, type: 2}
   ingredient: 2
   ingredientDislikes: 1
-  skillOffer: 03000000
-  skillNeeded: 2
+  skillOffer: 2
+  skillNeeded: 3
   st01_ingredientText: 'Good morning! Here are some aubergines. They would go to
     waste cause I am going on a trip! '
   st01_ingredientDislikeText: I don't fancy carrots. I'm not a rabbit, dear.
