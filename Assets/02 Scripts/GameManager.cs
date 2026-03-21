@@ -155,6 +155,15 @@ public class GameManager : MonoBehaviour
                 handTransform.gameObject.SetActive(false);
 
                 StartCoroutine(StartPeeperEncounterRoutine());
+
+                RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Trilight;
+
+                RenderSettings.ambientSkyColor = new Color(0.915f, 0.898f, 0.894f, 1.000f);
+                RenderSettings.ambientEquatorColor = new Color(0.566f, 0.159f, 0.120f, 1.000f);
+                RenderSettings.ambientGroundColor = new Color(0.858f, 0.400f, 0.239f, 1.000f);
+
+                DynamicGI.UpdateEnvironment();
+
                 break;
             case 2:
                 CurrentGameStage = GameStage.stage02;
@@ -164,6 +173,15 @@ public class GameManager : MonoBehaviour
                 cameraTransforms[1].gameObject.SetActive(true);
                 enableHandMovement = true;
                 handTransform.gameObject.SetActive(true);
+
+                RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Trilight;
+
+                RenderSettings.ambientSkyColor = new Color(0.514f, 0.656f, 1.000f, 1.000f);
+                RenderSettings.ambientEquatorColor = new Color(0.429f, 0.696f, 0.849f, 1.000f);
+                RenderSettings.ambientGroundColor = new Color(0.118f, 0.158f, 0.189f, 1.000f);
+
+                DynamicGI.UpdateEnvironment();
+
                 break;
             case 3:
 
@@ -176,7 +194,7 @@ public class GameManager : MonoBehaviour
     {
         uiManager.StageThreeContainer.SetActive(true);
         stageThreeContainer.SetActive(true);
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(1f);
 
         PlacePeople();
         CurrentGameStage = GameStage.stage03;
@@ -187,6 +205,14 @@ public class GameManager : MonoBehaviour
 
         enableHandMovement = false;
         handTransform.gameObject.SetActive(false);
+
+        RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Trilight;
+
+        RenderSettings.ambientSkyColor = new Color(0.807f, 0.479f, 0.847f, 1.0f);
+        RenderSettings.ambientEquatorColor = new Color(0.301f, 0.087f, 0.209f, 1.0f);
+        RenderSettings.ambientGroundColor = new Color(0.708f, 0.546f, 0.871f, 1.0f);
+
+        DynamicGI.UpdateEnvironment();
     }
     private Vector2 mousePosition;
 
@@ -203,7 +229,7 @@ public class GameManager : MonoBehaviour
             foreach (IngredientInfo i in CurrentSoup)
                 {
 
-                Debug.Log("Checking if person" + peepers[p].Name + "is coming:" + i.DisplayedIngredient + "/ dislikes" + peepers[p].IngredientDislikes);
+                    Debug.Log("Checking if person" + peepers[p].Name + "is coming:" + i.DisplayedIngredient + "/ dislikes" + peepers[p].IngredientDislikes);
 
                     if (i.DisplayedIngredient == peepers[p].IngredientDislikes)
                     {
@@ -212,6 +238,39 @@ public class GameManager : MonoBehaviour
                     }
                 }
         }
+
+        CheckForMatches(potentialguestlist);
+    }
+
+    private void CheckForMatches(List<PeeperProfile> guestlist)
+    {
+        List<string> queuedConversation = new List<string>();
+        List<string> queuedConversationNames = new List<string>();
+
+        foreach (PeeperProfile peeperInNeed in guestlist)
+        {
+            bool skillMatch = false;
+            foreach (PeeperProfile peeperToHelp in guestlist)
+            {
+                Debug.Log("CHECK IF PEOPLES NEEDS ARE MET:" + peeperInNeed.SkillNeeded + "/" + peeperToHelp.SkillOffer);
+                if (peeperInNeed.SkillNeeded == peeperToHelp.SkillOffer)
+                {
+                    queuedConversation.Add(peeperInNeed.St03_skillNeedText);
+                    queuedConversationNames.Add(peeperInNeed.Name);
+                    queuedConversation.Add(peeperToHelp.St03_skillOfferText);
+                    queuedConversationNames.Add(peeperToHelp.Name);
+                    skillMatch = true;
+                }
+            }
+
+            if (skillMatch == false)
+            {
+                queuedConversation.Add(peeperInNeed.St03_soupResultText);
+                queuedConversationNames.Add(peeperInNeed.Name);
+            }
+        }
+
+        uiManager.StartEndDialogue(queuedConversation, queuedConversationNames);
     }
 
     private void Update()

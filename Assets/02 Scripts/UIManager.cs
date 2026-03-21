@@ -44,7 +44,9 @@ public class UIManager : MonoBehaviour
     private int currentTutorialslide;
     private int currentTextSnippetIndex;
     private bool hasResponded;
-    List<string> currentTextSnippets;
+    List<string> stage03dialogues;
+    List<string> stage03names;
+    private int stage03currentTextIndex;
 
 
     private PeeperProfile currentPeeper;
@@ -178,6 +180,17 @@ public class UIManager : MonoBehaviour
 
                 break;
             case GameManager.GameStage.stage03:
+
+                stage03currentTextIndex++;
+
+                if (stage03currentTextIndex >= stage03dialogues.Count)
+                    Debug.Log("end game"); //endgame
+                else
+                {
+                    m_DialoguePeeperName.text = stage03names[stage03currentTextIndex];
+                    m_DialoguePeeperText.text = stage03dialogues[stage03currentTextIndex];
+                }
+
                 break;
         }
 
@@ -193,6 +206,23 @@ public class UIManager : MonoBehaviour
         m_Stage02Button.SetActive(false);
         m_StageTwoContainer.SetActive(true);
         gameManager.SwitchStage(2);
+    }
+
+    public void StartEndDialogue(List<string> stage03SetDialogues, List<string> stage03SetDialogueNames)
+    {
+        stage03dialogues = new List<string>();
+        stage03names = new List<string>();
+
+        stage03dialogues = stage03SetDialogues;
+        stage03names = stage03SetDialogueNames;
+
+        stage03currentTextIndex = 0;
+
+        m_DialogueContainer.SetActive(true);
+        m_DialogueOptionsContainer.SetActive(false);
+
+        m_DialoguePeeperName.text = stage03names[stage03currentTextIndex];
+        m_DialoguePeeperText.text = stage03dialogues[stage03currentTextIndex];
     }
 
 }
