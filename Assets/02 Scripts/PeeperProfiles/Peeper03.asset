@@ -14,18 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Peeper
   name: June
   defaultMaterial: {fileID: 2100000, guid: b16a590c0ef80eb42a2e979228fb67b5, type: 2}
-  ingredient: 3
-  ingredientDislikes: 05000000
-  skillOffer: 3
-  skillNeeded: 4
-  st01_ingredientText: Hello! I am bringing ingredient_03
-  st01_ingredientDislikeText: oh, thanks for asking. I really dislike ingredient
-    05.
-  st01_skillOfferText: You are asking what I do in my free time? I am really good
-    at skill 03
-  st01_skillNeedText: You know, lately I had a problem with skill 04
-  st03_soupResultText: Oh wow! This soup is delicious. I especially like that we
-    made this soup by food sharing
-  st03_skillOfferText: I can help you with the problem you have with my skill 03
+  ingredient: 5
+  ingredientDislikes: 6
+  skillOffer: 04000000
+  skillNeeded: 3
+  st01_ingredientText: Greeting, I came to give a few potatoes. Hope they can be
+    of good use.
+  st01_ingredientDislikeText: I cannot have anything spicy nowadays. Before that
+    was my favourite, but times have changed.
+  st01_skillOfferText: 'One thing I know well is the city. I can get you anywhere
+    with my trusty car.  '
+  st01_skillNeedText: I am getting ready for feedback session about a new law. One
+    thing that can help is inviting more people, so catchy flyer could be of good
+    use.
+  st03_soupResultText: Good balance of flavour. I appreacite the meal.
+  st03_skillOfferText: It's not much, but It would be my pleasure to help.
   st03_skillNeedText: The soup is great, but I have a huge issue where skill 04 would
     be convenient.

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Peeper
   name: Caro
   defaultMaterial: {fileID: 2100000, guid: e7f87441ff14a2d4081aee990ba580f9, type: 2}
-  ingredient: 5
-  ingredientDislikes: 04000000
-  skillOffer: 5
+  ingredient: 6
+  ingredientDislikes: 0
+  skillOffer: 
   skillNeeded: 6
   st01_ingredientText: Hello! I am bringing ingredient_05
   st01_ingredientDislikeText: oh, thanks for asking. I really dislike ingredient

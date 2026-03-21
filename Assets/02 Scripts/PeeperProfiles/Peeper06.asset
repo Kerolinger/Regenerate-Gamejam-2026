@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Peeper
   name: Polina
   defaultMaterial: {fileID: 2100000, guid: 6026d4d8c7409a642b93bf1b98c343e7, type: 2}
-  ingredient: 6
-  ingredientDislikes: 02000000
-  skillOffer: 6
+  ingredient: 3
+  ingredientDislikes: 2
+  skillOffer: 
   skillNeeded: 1
   st01_ingredientText: Hello! I am bringing ingredient_06
   st01_ingredientDislikeText: oh, thanks for asking. I really dislike ingredient

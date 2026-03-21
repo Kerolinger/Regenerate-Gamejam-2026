@@ -15,17 +15,18 @@ MonoBehaviour:
   name: Mascha
   defaultMaterial: {fileID: 2100000, guid: f36d998a3996ef74d9cfe919f8e6e38f, type: 2}
   ingredient: 2
-  ingredientDislikes: 06000000
-  skillOffer: 2
-  skillNeeded: 3
-  st01_ingredientText: Hello! I am bringing ingredient_02
-  st01_ingredientDislikeText: oh, thanks for asking. I really dislike ingredient
-    06.
-  st01_skillOfferText: You are asking what I do in my free time? I am really good
-    at skill 02
-  st01_skillNeedText: You know, lately I had a problem with skill 03
-  st03_soupResultText: Oh wow! This soup is delicious. I especially like that its
-    not a lasagna
-  st03_skillOfferText: I can help you with the problem you have with my skill 02
-  st03_skillNeedText: The soup is great, but I have a huge issue where skill 03 would
-    be convenient.
+  ingredientDislikes: 1
+  skillOffer: 03000000
+  skillNeeded: 2
+  st01_ingredientText: 'Good morning! Here are some aubergines. They would go to
+    waste cause I am going on a trip! '
+  st01_ingredientDislikeText: I don't fancy carrots. I'm not a rabbit, dear.
+  st01_skillOfferText: 'I work as an artists, so any art you need - I''m here to
+    help, dear! '
+  st01_skillNeedText: 'As I''m going away, so I need someone to feed the local cats.
+    You know they are free spirits, but need our care. '
+  st03_soupResultText: Can I taste some muscat nut? Lovely meal, dear!
+  st03_skillOfferText: That sounds like a job I can help with! I love doing art,
+    and to hear my art can help a good cause is a true joy.
+  st03_skillNeedText: "I cannot stop thinking about the local hundry cats. I need
+    to find someone who can feed them while I am out for a trip.\t"
