@@ -16,11 +16,12 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: 76dac593878452b419b1a1afba2cf9cb, type: 2}
   ingredient: 1
   ingredientDislikes: 4
-  skillOffer: 06000000
+  skillOffer: 6
   skillNeeded: 1
-  st01_ingredientText: 'Hi there! I have some leftover carrots for you. '
-  st01_ingredientDislikeText: 'I really dislike beetroots. Love the beats, but not
-    the root kind. '
+  st01_ingredientText: Hi there! Havest has been crazy this year, so I have many
+    leftover carrots for you.
+  st01_ingredientDislikeText: One thing I really dislike, is beetroots. I'm not rooting
+    for that beet.
   st01_skillOfferText: 'I learned a lot about being a parent through the years. '
   st01_skillNeedText: 'My kid, she had a fight with her friend in the community group.
     And I don''t have anyone to leave her with, while I go to the doctor. '

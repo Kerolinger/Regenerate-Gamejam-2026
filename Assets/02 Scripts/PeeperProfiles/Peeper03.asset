@@ -16,10 +16,10 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: b16a590c0ef80eb42a2e979228fb67b5, type: 2}
   ingredient: 5
   ingredientDislikes: 6
-  skillOffer: 04000000
+  skillOffer: 4
   skillNeeded: 3
   st01_ingredientText: Greeting, I came to give a few potatoes. Hope they can be
-    of good use.
+    of good use for the soup.
   st01_ingredientDislikeText: I cannot have anything spicy nowadays. Before that
     was my favourite, but times have changed.
   st01_skillOfferText: 'One thing I know well is the city. I can get you anywhere
@@ -29,5 +29,5 @@ MonoBehaviour:
     use.
   st03_soupResultText: Good balance of flavour. I appreacite the meal.
   st03_skillOfferText: It's not much, but It would be my pleasure to help.
-  st03_skillNeedText: The soup is great, but I have a huge issue where skill 04 would
-    be convenient.
+  st03_skillNeedText: Tomorrow I have to find who can can draw my a catchy flyer.
+    I want to engage more people to a law feedback session next week.

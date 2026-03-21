@@ -16,11 +16,12 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: f36d998a3996ef74d9cfe919f8e6e38f, type: 2}
   ingredient: 2
   ingredientDislikes: 1
-  skillOffer: 03000000
+  skillOffer: 3
   skillNeeded: 2
   st01_ingredientText: 'Good morning! Here are some aubergines. They would go to
     waste cause I am going on a trip! '
-  st01_ingredientDislikeText: I don't fancy carrots. I'm not a rabbit, dear.
+  st01_ingredientDislikeText: Would the soup have carrots? I don't fancy carrots.
+    I'm not a rabbit, dear.
   st01_skillOfferText: 'I work as an artists, so any art you need - I''m here to
     help, dear! '
   st01_skillNeedText: 'As I''m going away, so I need someone to feed the local cats.
