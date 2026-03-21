@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1fffe16f7e062a489f57b17e497e9e2, type: 3}
   m_Name: Ingredient06
   m_EditorClassIdentifier: Assembly-CSharp::IngredientInfo
-  displayedIngredient: 6
+  displayedIngredient: 3
   displayedIngredientMaterial: {fileID: 2100000, guid: bbf856634369cb346bb56d022a6aaac1, type: 2}
