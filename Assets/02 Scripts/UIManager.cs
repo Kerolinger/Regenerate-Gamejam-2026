@@ -29,6 +29,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject m_DialogueNextButton;
     [SerializeField] private GameObject m_DialogueOptionsContainer;
 
+    [Header("Stage Two UI References")]
+
+    [SerializeField] private GameObject m_StageTwoContainer;
+
+    [Space]
     [Header("Other References")]
     [SerializeField] private GameObject m_Stage02Button;
 
@@ -180,5 +185,7 @@ public class UIManager : MonoBehaviour
     {
         m_Stage02Button.SetActive(false);
         gameManager.SwitchStage(2);
+
     }
+
 }

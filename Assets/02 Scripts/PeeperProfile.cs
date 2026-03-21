@@ -35,6 +35,6 @@ public class PeeperProfile : ScriptableObject
     public string St01_skillNeedText { get => st01_skillNeedText; set => st01_skillNeedText = value; }
     public Skills[] SkillOffer { get => skillOffer; set => skillOffer = value; }
 
-    public enum Ingredients { none, ingredient01, ingredient02, ingredient03, ingredient04, ingredient05, ingredient06};
+    public enum Ingredients { none, carrot, aubergine, chickpeas, beetroot, potato, chilli};
     public enum Skills { none, skill01, skill02, skill03, skill04, skill05, skill06};
 }

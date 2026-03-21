@@ -15,8 +15,8 @@ MonoBehaviour:
   name: Thomas
   defaultMaterial: {fileID: 2100000, guid: 76dac593878452b419b1a1afba2cf9cb, type: 2}
   ingredient: 1
-  ingredientDislikes: 01000000
-  skillOffer: 1
+  ingredientDislikes: 1
+  skillOffer: 
   skillNeeded: 2
   st01_ingredientText: Hello! I am bringing ingredient_01.
   st01_ingredientDislikeText: oh, thanks for asking. I really dislike ingredient
