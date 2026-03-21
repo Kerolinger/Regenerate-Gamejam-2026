@@ -164,22 +164,46 @@ public class GameManager : MonoBehaviour
                 handTransform.gameObject.SetActive(true);
                 break;
             case 3:
-                CurrentGameStage = GameStage.stage03;
-                currentCamera = cameraTransforms[0];
-                currentCameraCamera = currentCamera.GetComponentInChildren<Camera>();
-                cameraTransforms[0].gameObject.SetActive(false);
-                cameraTransforms[1].gameObject.SetActive(true);
 
-                enableHandMovement = false;
-                handTransform.gameObject.SetActive(false);
-
-                uiManager.StageThreeContainer.SetActive(true);
-
+                StartCoroutine(SetStagethreetiming());
                 break;
         }
     }
 
+    private IEnumerator SetStagethreetiming()
+    {
+        uiManager.StageThreeContainer.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+
+        PlacePeople();
+        CurrentGameStage = GameStage.stage03;
+        currentCamera = cameraTransforms[0];
+        currentCameraCamera = currentCamera.GetComponentInChildren<Camera>();
+        cameraTransforms[0].gameObject.SetActive(true);
+        cameraTransforms[1].gameObject.SetActive(false);
+
+        enableHandMovement = false;
+        handTransform.gameObject.SetActive(false);
+    }
     private Vector2 mousePosition;
+
+
+    private void PlacePeople()
+    {
+        //potential gästeliste
+        List<PeeperProfile> potentialguestlist = new List<PeeperProfile>();
+
+        foreach (PeeperProfile p in peepers)
+            potentialguestlist.Add(p);
+
+        foreach (IngredientInfo i in CurrentSoup)
+
+    }
+
+    private bool IngredientDislikeCheck()
+    {
+
+    }
 
     private void Update()
     {

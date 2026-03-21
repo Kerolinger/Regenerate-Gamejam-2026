@@ -9,7 +9,7 @@ public class PeeperProfile : ScriptableObject
     [Space]
     [SerializeField] private Ingredients ingredient = Ingredients.none;
     [SerializeField] private Ingredients ingredientDislikes;
-    [SerializeField] private Skills[] skillOffer;
+    [SerializeField] private Skills skillOffer;
     [SerializeField] private Skills skillNeeded = Skills.none;
 
     [Header("Narrative Bits - Stage 01")]
@@ -33,7 +33,7 @@ public class PeeperProfile : ScriptableObject
     public string St01_ingredientDislikeText { get => st01_ingredientDislikeText; set => st01_ingredientDislikeText = value; }
     public string St01_skillOfferText { get => st01_skillOfferText; set => st01_skillOfferText = value; }
     public string St01_skillNeedText { get => st01_skillNeedText; set => st01_skillNeedText = value; }
-    public Skills[] SkillOffer { get => skillOffer; set => skillOffer = value; }
+    public Skills SkillOffer { get => skillOffer; set => skillOffer = value; }
 
     public enum Ingredients { none, carrot, aubergine, chickpeas, beetroot, potato, chilli};
     public enum Skills { none, skill01, skill02, skill03, skill04, skill05, skill06};
