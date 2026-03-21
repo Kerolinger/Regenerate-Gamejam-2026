@@ -1,28 +1,22 @@
+using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Peeper", menuName = "Scriptable Objects/Peeper")]
-public class Peeper : ScriptableObject
+public class Peeper : MonoBehaviour
 {
-    [Header("Basic Information")]
-    [SerializeField] private string name;
-    [SerializeField] private Material defaultMaterial;
-    [Space]
-    [SerializeField] private Ingredients ingredient = Ingredients.none;
-    [SerializeField] private Ingredients[] ingredientDislikes;
-    [SerializeField] private Skills skillOffer = Skills.none;
-    [SerializeField] private Skills skillNeeded = Skills.none;
+    [Header("Please leave empty, will be filled out via code")]
+    [SerializeField] private PeeperProfile currentPeeperProfile;
 
-    [Header("Narrative Bits - Stage 01")]
-    [SerializeField] [TextArea (2,2)] private string st01_ingredientText;
-    [SerializeField][TextArea(2, 2)] private string st01_ingredientDislikeText;
-    [SerializeField][TextArea(2, 2)] private string st01_skillOfferText;
-    [SerializeField][TextArea(2, 2)] private string st01_skillNeedText;
+    [Header ("Prefab References")]
+    [SerializeField] private MeshRenderer peeperMaterial;
+    [SerializeField] private MeshRenderer ingredientMaterial;
 
-    [Header("Narrative Bits - Stage 03")]
-    [SerializeField][TextArea(2, 2)] private string st03_soupResultText;
-    [SerializeField][TextArea(2, 2)] private string st03_skillOfferText;
-    [SerializeField][TextArea(2, 2)] private string st03_skillNeedText;
+    public PeeperProfile CurrentPeeperProfile { get => currentPeeperProfile; set => currentPeeperProfile = value; }
 
-    public enum Ingredients { none, ingredient01, ingredient02, ingredient03, ingredient04, ingredient05, ingredient06};
-    public enum Skills { none, skill01, skill02, skill03, skill04, skill05, skill06};
+    public void SetPeeper(PeeperProfile newPeeperProfile, Material newIngredientMaterial)
+    {
+        currentPeeperProfile = newPeeperProfile;
+
+        peeperMaterial.material = currentPeeperProfile.DefaultMaterial;
+        ingredientMaterial.material = newIngredientMaterial;
+    }
 }

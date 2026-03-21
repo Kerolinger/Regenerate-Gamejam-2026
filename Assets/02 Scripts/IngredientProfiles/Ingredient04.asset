@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Ingredient04
   m_EditorClassIdentifier: Assembly-CSharp::IngredientInfo
   displayedIngredient: 4
-  displayedIngredientSprite: {fileID: 21300000, guid: 51b5b0c005b604943a23112a1aacddb3, type: 3}
+  displayedIngredientMaterial: {fileID: 2100000, guid: 061a42810e0e7324a99463d329ec4598, type: 2}
