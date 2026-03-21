@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -40,10 +41,12 @@ public class UIManager : MonoBehaviour
     [Space]
     [Header("Other References")]
     [SerializeField] private GameObject m_Stage02Button;
+    [SerializeField] private GameObject m_ENDGAMEMAMA;
 
     private int currentTutorialslide;
     private int currentTextSnippetIndex;
     private bool hasResponded;
+    private bool hasSaidDislike;
     List<string> stage03dialogues;
     List<string> stage03names;
     private int stage03currentTextIndex;
@@ -121,6 +124,7 @@ public class UIManager : MonoBehaviour
     public void TriggerDialogue(PeeperProfile newPeeper, string newTextSnippet)
     {
         hasResponded = false;
+        hasSaidDislike = false;
         currentPeeper = newPeeper;
         m_DialogueContainer.SetActive(true);
         m_DialogueOptionsContainer.SetActive(false);
@@ -152,6 +156,7 @@ public class UIManager : MonoBehaviour
     public void BTN_QuestionProblem()
     {
         hasResponded = true;
+       
         m_DialogueOptionsContainer.SetActive(false);
         m_DialoguePeeperNameContainer.SetActive(true);
         m_DialogueNextButton.SetActive(true);
@@ -165,17 +170,27 @@ public class UIManager : MonoBehaviour
         {
             case GameManager.GameStage.stage01:
 
-                if (!hasResponded)
+                if(!hasSaidDislike)
                 {
-                    m_DialoguePeeperText.text = "(pick what to ask)";
-                    m_DialogueOptionsContainer.SetActive(true);
-                    m_DialoguePeeperNameContainer.SetActive(false);
-                    m_DialogueNextButton.SetActive(false);
+                    hasSaidDislike = true;
+                    m_DialogueNextButton.SetActive(true);
+                    m_DialoguePeeperText.text = currentPeeper.St01_ingredientDislikeText;
                 }
                 else
                 {
-                    m_DialogueContainer.SetActive(false);
-                    gameManager.RemovePeeper();
+
+                    if (!hasResponded)
+                    {
+                        m_DialoguePeeperText.text = "(pick what to ask)";
+                        m_DialogueOptionsContainer.SetActive(true);
+                        m_DialoguePeeperNameContainer.SetActive(false);
+                        m_DialogueNextButton.SetActive(false);
+                    }
+                    else
+                    {
+                        m_DialogueContainer.SetActive(false);
+                        gameManager.RemovePeeper();
+                    }
                 }
 
                 break;
@@ -184,7 +199,10 @@ public class UIManager : MonoBehaviour
                 stage03currentTextIndex++;
 
                 if (stage03currentTextIndex >= stage03dialogues.Count)
-                    Debug.Log("end game"); //endgame
+                {
+                    m_ENDGAMEMAMA.SetActive(true);
+                    m_DialogueOptionsContainer.SetActive(false);
+                }
                 else
                 {
                     m_DialoguePeeperName.text = stage03names[stage03currentTextIndex];
@@ -223,6 +241,16 @@ public class UIManager : MonoBehaviour
 
         m_DialoguePeeperName.text = stage03names[stage03currentTextIndex];
         m_DialoguePeeperText.text = stage03dialogues[stage03currentTextIndex];
+    }
+
+    public void BTN_Retry()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void BTN_MainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
 }

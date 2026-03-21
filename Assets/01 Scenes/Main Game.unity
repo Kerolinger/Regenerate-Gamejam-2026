@@ -669,6 +669,11 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &445207632 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6182600716518418587, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
+  m_PrefabInstance: {fileID: 1295346862}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &463654779
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,6 +1496,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3418995391032211304, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1613440062}
+    - target: {fileID: 3418995391032211304, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BTN_MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5956569728782920216, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1613440062}
+    - target: {fileID: 5956569728782920216, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BTN_Retry
+      objectReference: {fileID: 0}
     - target: {fileID: 6587338468801151969, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
       propertyPath: m_Name
       value: HUD 1
@@ -1583,6 +1604,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 676289555}
+    - target: {fileID: 8681301595235773196, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
+      propertyPath: m_ENDGAMEMAMA
+      value: 
+      objectReference: {fileID: 445207632}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
