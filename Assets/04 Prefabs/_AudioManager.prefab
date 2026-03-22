@@ -177,3 +177,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: wholesomeTheme
+    clip: {fileID: 8300000, guid: 6451a5c3bfe079042b0cacf4124327e1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

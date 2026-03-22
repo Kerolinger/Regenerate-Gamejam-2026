@@ -35,10 +35,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        Play("main theme");
-    }
     //____________________________________________________________________
 
     public void Play ( string name)
