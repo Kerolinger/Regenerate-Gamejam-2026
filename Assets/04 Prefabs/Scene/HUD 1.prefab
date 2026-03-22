@@ -238,7 +238,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   uiManager: {fileID: 8681301595235773196}
   ingredientInfo: {fileID: 11400000, guid: 8cf8134aac0df8e46b0205a05777afbe, type: 2}
-  HoverText: A carrot brought by Tommy. Tommy dislikes beetroots.
+  HoverText: 'A carrot brought by Tommy. But Tommy doesn''t want any beets in his
+    soup.  '
   ingredient3D: {fileID: 0}
 --- !u!114 &7992838962779962466
 MonoBehaviour:
@@ -1314,7 +1315,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   uiManager: {fileID: 8681301595235773196}
   ingredientInfo: {fileID: 11400000, guid: 3569443f2a6b12442b778c3df668dcdb, type: 2}
-  HoverText: POPTATOOOOO
+  HoverText: 'A potato that June brought. June can''t have anything too spicy in
+    the soup.  '
   ingredient3D: {fileID: 0}
 --- !u!114 &7220777268091977699
 MonoBehaviour:
@@ -2440,7 +2442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   uiManager: {fileID: 8681301595235773196}
   ingredientInfo: {fileID: 11400000, guid: 9bbb84551e08baa49a999600f0a02e75, type: 2}
-  HoverText: An aubergine brought by Mascha. Mascha does not eat carrots.
+  HoverText: 'An aubergine brought by Mascha. Mascha does not eat carrots.  '
   ingredient3D: {fileID: 0}
 --- !u!114 &7697583708415482561
 MonoBehaviour:
@@ -2587,8 +2589,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ENDTEXTENDTEsdkjfuhsdafhsdkihfiosdfjoisdjfiosdj fsidjfoisdfj soikdfjosdj
-    sodjf osd fosid fjos osdf \n"
+  m_text: "Today was full of sunshine and smiles at Soup Kitchen #154B.\_One soup
+    at a time builds the community. Open the kitchen again to have another cozy dinner."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 708dc61df98301a4b83d13c88b65e091, type: 2}
   m_sharedMaterial: {fileID: 898464728911790026, guid: 708dc61df98301a4b83d13c88b65e091, type: 2}
@@ -3241,7 +3243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   uiManager: {fileID: 8681301595235773196}
   ingredientInfo: {fileID: 11400000, guid: f852875e81991cc49a0c37d707612959, type: 2}
-  HoverText: A spoon. Po and Lina do not like eggplants though.
+  HoverText: 'A spoon from Po and Lina. They do not like eggplants, though.  '
   ingredient3D: {fileID: 0}
 --- !u!114 &6917352811288096692
 MonoBehaviour:
@@ -3735,7 +3737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   uiManager: {fileID: 8681301595235773196}
   ingredientInfo: {fileID: 11400000, guid: a340c802bb5fded49b57111297bb4f99, type: 2}
-  HoverText: A lovely beetroot brought by Qris. Qris does not like potatos though.
+  HoverText: 'Beetroot from Qris''s dad. Qris cannot have a soup with potatoes.  '
   ingredient3D: {fileID: 0}
 --- !u!114 &8217195372448394613
 MonoBehaviour:
@@ -4197,7 +4199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8233419310970878322
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4637,8 +4639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   uiManager: {fileID: 8681301595235773196}
   ingredientInfo: {fileID: 11400000, guid: 0f3cbafea8f3f684a91b7e6fb8301ace, type: 2}
-  HoverText: A chilly chilli brought by Caro. Caro eats everything because she wants
-    some sunshine tomorrow
+  HoverText: 'Fresh chilli from Caro to spice up the food. Caro could eat anything.  '
   ingredient3D: {fileID: 0}
 --- !u!114 &6263342445043619997
 MonoBehaviour:
@@ -5356,6 +5357,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8681301595235773196}
+    - target: {fileID: 4582417498184675618, guid: a12b0fa3d69cab84aa0372f5f3ca24f9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BTN_TutorialNext
+      objectReference: {fileID: 0}
     - target: {fileID: 5089283983059044165, guid: a12b0fa3d69cab84aa0372f5f3ca24f9, type: 3}
       propertyPath: m_Name
       value: BTN_next
@@ -5735,6 +5740,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8681301595235773196}
+    - target: {fileID: 4582417498184675618, guid: a12b0fa3d69cab84aa0372f5f3ca24f9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BTN_ToggleTutorial
+      objectReference: {fileID: 0}
     - target: {fileID: 5089283983059044165, guid: a12b0fa3d69cab84aa0372f5f3ca24f9, type: 3}
       propertyPath: m_Name
       value: BTN_startgame
