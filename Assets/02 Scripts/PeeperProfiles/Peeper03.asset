@@ -18,16 +18,16 @@ MonoBehaviour:
   ingredientDislikes: 6
   skillOffer: 4
   skillNeeded: 3
-  st01_ingredientText: Greeting, I came to give a few potatoes. Hope they can be
-    of good use for the soup.
+  st01_ingredientText: Greetings, I came to give a few potatoes. Hope they can be
+    of good use for the dinner.
   st01_ingredientDislikeText: I cannot have anything spicy nowadays. Before that
     was my favourite, but times have changed.
   st01_skillOfferText: 'One thing I know well is the city. I can get you anywhere
     with my trusty car.  '
-  st01_skillNeedText: I am getting ready for feedback session about a new law. One
-    thing that can help is inviting more people, so catchy flyer could be of good
-    use.
-  st03_soupResultText: Good balance of flavour. I appreacite the meal.
+  st01_skillNeedText: I am getting ready for a feedback session about a new law.
+    One thing that can help is inviting more people, so a catchy flyer could be of
+    good use.
+  st03_soupResultText: Good balance of flavour. I appreciate the meal.
   st03_skillOfferText: It's not much, but It would be my pleasure to help.
-  st03_skillNeedText: Tomorrow I have to find who can can draw my a catchy flyer.
+  st03_skillNeedText: Tomorrow I have to find someone who can draw a catchy flyer.
     I want to engage more people to a law feedback session next week.

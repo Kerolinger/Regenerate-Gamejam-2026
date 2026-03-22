@@ -20,14 +20,14 @@ MonoBehaviour:
   skillNeeded: 2
   st01_ingredientText: 'Good morning! Here are some aubergines. They would go to
     waste cause I am going on a trip! '
-  st01_ingredientDislikeText: Would the soup have carrots? I don't fancy carrots.
-    I'm not a rabbit, dear.
-  st01_skillOfferText: 'I work as an artists, so any art you need - I''m here to
-    help, dear! '
-  st01_skillNeedText: 'As I''m going away, so I need someone to feed the local cats.
+  st01_ingredientDislikeText: Would the soup have carrots? I am allergic to carrots,
+    dear.
+  st01_skillOfferText: 'I work as an artist, so any art you need - I''m here to help,
+    dear! '
+  st01_skillNeedText: 'As I''m going away, I need someone to feed the local cats.
     You know they are free spirits, but need our care. '
-  st03_soupResultText: Can I taste some muscat nut? Lovely meal, dear!
+  st03_soupResultText: Can I taste some muscat nut? Lovely dinner, dear!
   st03_skillOfferText: That sounds like a job I can help with! I love doing art,
     and to hear my art can help a good cause is a true joy.
-  st03_skillNeedText: "I cannot stop thinking about the local hundry cats. I need
-    to find someone who can feed them while I am out for a trip.\t"
+  st03_skillNeedText: I cannot stop thinking about the local hungry cats. I need
+    to find someone who can feed them while I am out for a trip.
