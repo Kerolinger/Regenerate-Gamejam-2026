@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     public Transform currentCamera;
 
-    [Header ("References")]
+    [Header("References")]
     [SerializeField] private UIManager uiManager;
     [SerializeField] private PeeperProfile[] peepers;
     [SerializeField] private IngredientInfo[] ingredients;
@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform[] stageThreeTransforms;
     [SerializeField] private Transform handTransform;
     [SerializeField] private GameObject stageThreeContainer;
+
+    [SerializeField] private Transform[] peeperPos;
 
     [Header("Ingame Tools")]
     [SerializeField] private bool disableTutorial;
@@ -34,7 +36,7 @@ public class GameManager : MonoBehaviour
     public GameStage CurrentGameStage { get => currentGameStage; set => currentGameStage = value; }
     public IngredientInfo[] Ingredients { get => ingredients; set => ingredients = value; }
 
-    public enum GameStage { stage01, stage02, stage03};
+    public enum GameStage { stage01, stage02, stage03 };
 
     private bool enableHandMovement;
 
@@ -85,10 +87,17 @@ public class GameManager : MonoBehaviour
         AudioManager.instance.Play(peeperPopup);
 
         currentPeeper = Instantiate(peeperPrefab);
-        currentPeeper.transform.position = new Vector3(5f, -5, 1f);
-        currentPeeper.transform.DOMove(new Vector3(5f, 0, 1f), 0.5f ).SetEase(Ease.OutSine);
-        currentPeeper.transform.DORotate(new Vector3(0, -230f, 0), 0.1f);
-        currentPeeper.GetComponent<Peeper>().SetPeeper(peepers[currentPeeperIndex], GetIngredientMaterial(peepers[currentPeeperIndex].Ingredient),this);
+        //currentPeeper.transform.position = peeperPos[currentPeeperIndex].position;
+        currentPeeper.transform.rotation = peeperPos[currentPeeperIndex].rotation;
+
+        Vector3 currPeepPos = new Vector3(peeperPos[currentPeeperIndex].position.x, peeperPos[currentPeeperIndex].position.y-5, peeperPos[currentPeeperIndex].position.z);
+        currentPeeper.transform.position = currPeepPos;
+        currentPeeper.transform.DOLocalMove(peeperPos[currentPeeperIndex].position, 0.5f).SetEase(Ease.OutSine);
+    
+  
+        currentPeeper.GetComponent<Peeper>().SetPeeper(peepers[currentPeeperIndex], GetIngredientMaterial(peepers[currentPeeperIndex].Ingredient), this);
+
+      
 
         uiManager.TriggerDialogue(peepers[currentPeeperIndex], peepers[currentPeeperIndex].St01_ingredientText);
 
@@ -98,7 +107,9 @@ public class GameManager : MonoBehaviour
     public void RemovePeeper()
     {
         AudioManager.instance.Play(peeperLeave);
-        currentPeeper.transform.DOMove(new Vector3(5f, -5, 1f), 0.5f).SetEase(Ease.OutSine).OnComplete(() =>
+        Vector3 newPeepPos = new Vector3(currentPeeper.transform.position.x, currentPeeper.transform.position.y - 5, currentPeeper.transform.position.z);
+
+        currentPeeper.transform.DOLocalMove(newPeepPos, 0.5f).SetEase(Ease.OutSine).OnComplete(() =>
         {
             Destroy(currentPeeper);
             currentPeeper = null;
@@ -107,14 +118,14 @@ public class GameManager : MonoBehaviour
             {
                 uiManager.DisplayStage02Button();
             }
-            else   
+            else
                 StartCoroutine(StartPeeperEncounterRoutine());
         });
     }
 
     private Material GetIngredientMaterial(PeeperProfile.Ingredients i)
     {
-        switch(i)
+        switch (i)
         {
             case PeeperProfile.Ingredients.carrot:
                 return Ingredients[0].DisplayedIngredientMaterial;
@@ -254,16 +265,16 @@ public class GameManager : MonoBehaviour
             potentialguestlist.Add(peepers[p]);
 
             foreach (IngredientInfo i in CurrentSoup)
+            {
+
+                Debug.Log("Checking if person" + peepers[p].Name + "is coming:" + i.DisplayedIngredient + "/ dislikes" + peepers[p].IngredientDislikes);
+
+                if (i.DisplayedIngredient == peepers[p].IngredientDislikes)
                 {
-
-                    Debug.Log("Checking if person" + peepers[p].Name + "is coming:" + i.DisplayedIngredient + "/ dislikes" + peepers[p].IngredientDislikes);
-
-                    if (i.DisplayedIngredient == peepers[p].IngredientDislikes)
-                    {
-                        potentialguestlist.Remove(peepers[p]);
-                        stageThreeTransforms[p].gameObject.SetActive(false);
-                    }
+                    potentialguestlist.Remove(peepers[p]);
+                    stageThreeTransforms[p].gameObject.SetActive(false);
                 }
+            }
         }
 
         CheckForMatches(potentialguestlist);
