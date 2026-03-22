@@ -2152,6 +2152,14 @@ PrefabInstance:
         at a time builds the community. Open the kitchen again to have another cozy
         dinner."
       objectReference: {fileID: 0}
+    - target: {fileID: 412731772238348895, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
+      propertyPath: m_fontSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 412731772238348895, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 975489264688456864, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -2466,10 +2474,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: BTN_ToggleTutorial
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3752963014485405291, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1778540789156414409, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1976845138}
   m_SourcePrefab: {fileID: 100100000, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
 --- !u!114 &1295346863 stripped
 MonoBehaviour:
@@ -2492,6 +2504,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 64184858694793665, guid: 0bbf65f9787c10e418f25d610785665e, type: 3}
       propertyPath: sounds.Array.data[6].volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64184858694793665, guid: 0bbf65f9787c10e418f25d610785665e, type: 3}
+      propertyPath: sounds.Array.data[7].volume
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1968202804316333624, guid: 0bbf65f9787c10e418f25d610785665e, type: 3}
@@ -2921,6 +2937,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3665725347878724793, guid: 63500c0dd8f8ecd4bbe03ae6802276c0, type: 3}
   m_PrefabInstance: {fileID: 7624658465989335728}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1976845133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1778540789156414409, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
+  m_PrefabInstance: {fileID: 1295346862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1976845138
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976845133}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1996712242
 PrefabInstance:
   m_ObjectHideFlags: 0

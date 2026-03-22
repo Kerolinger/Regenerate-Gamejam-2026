@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
     private const string peeperLeave = "peeperLeave";
     private const string doorBell = "doorBell";
     private const string doorOpen = "doorOpen";
+    private const string wholesomeTheme = "wholesomeTheme";
 
     private void Start()
     {
@@ -228,6 +229,7 @@ public class GameManager : MonoBehaviour
                 AudioManager.instance.FadeOut(ambienceStageTwo, 0f);
                 AudioManager.instance.Play(ambienceStageThree);
                 StartCoroutine(SetStagethreetiming());
+                AudioManager.instance.Play(wholesomeTheme);
                 break;
         }
     }
