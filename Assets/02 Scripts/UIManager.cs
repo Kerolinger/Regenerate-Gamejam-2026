@@ -84,7 +84,7 @@ public class UIManager : MonoBehaviour
         m_tutorialContainer.SetActive(true);
         currentTutorialslide = 0;
         UpdateTutorialPage();
-        CameraRotator.instance.ChangeMouseRotation(false);
+        CameraRotator.instance.ChangeMouseRotation(true);
 
     }
     public void BTN_TutorialBack()
@@ -135,8 +135,11 @@ public class UIManager : MonoBehaviour
     {
         m_tutorialContainer.SetActive(!m_tutorialContainer.activeSelf);
 
-        if(!m_tutorialContainer.activeSelf)
-            CameraRotator.instance.ChangeMouseRotation(true);
+        if (!m_tutorialContainer.activeSelf)
+        {
+            CameraRotator.instance.ChangeMouseRotation(false);
+            gameManager.SwitchStage(1);
+        }
     }
 
     #endregion
@@ -252,6 +255,14 @@ public class UIManager : MonoBehaviour
                     {
                         m_DialogueContainer.SetActive(false);
                         gameManager.RemovePeeper();
+
+                        AudioManager.instance.Stop(tommyTalking);
+                        AudioManager.instance.Stop(maschaTalking);
+                        AudioManager.instance.Stop(juneTalking);
+                        AudioManager.instance.Stop(qrisTalking);
+                        AudioManager.instance.Stop(georgyTalking);
+                        AudioManager.instance.Stop(poTalking);
+                        AudioManager.instance.Stop(linaTalking);
                     }
                 }
 
@@ -265,7 +276,7 @@ public class UIManager : MonoBehaviour
                     m_ENDGAMEMAMA.SetActive(true);
                     m_DialogueOptionsContainer.SetActive(false);
                     m_DialogueContainer.SetActive(false);
-                    CameraRotator.instance.ChangeMouseRotation(false);
+                    CameraRotator.instance.ChangeMouseRotation(true);
 
                     AudioManager.instance.Stop(tommyTalking);
                     AudioManager.instance.Stop(maschaTalking);

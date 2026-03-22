@@ -61,8 +61,12 @@ public class GameManager : MonoBehaviour
             AudioManager.instance.Play(ambienceTutorial);
             AudioManager.instance.Play(ambienceStageOne);
         }
+        else
+        {
+            SwitchStage(1);
+        }
 
-        SwitchStage(1);
+
         CurrentSoup = new List<IngredientInfo>();
     }
 
@@ -133,16 +137,16 @@ public class GameManager : MonoBehaviour
             case PeeperProfile.Ingredients.aubergine:
                 return Ingredients[1].DisplayedIngredientMaterial;
 
-            case PeeperProfile.Ingredients.chickpeas:
+            case PeeperProfile.Ingredients.potato:
                 return Ingredients[2].DisplayedIngredientMaterial;
 
             case PeeperProfile.Ingredients.beetroot:
                 return Ingredients[3].DisplayedIngredientMaterial;
 
-            case PeeperProfile.Ingredients.potato:
+            case PeeperProfile.Ingredients.chilli:
                 return Ingredients[4].DisplayedIngredientMaterial;
 
-            case PeeperProfile.Ingredients.chilli:
+            case PeeperProfile.Ingredients.chickpeas:
                 return Ingredients[5].DisplayedIngredientMaterial;
         }
 
