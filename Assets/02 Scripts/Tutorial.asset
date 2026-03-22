@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Tutorial
   m_EditorClassIdentifier: Assembly-CSharp::Tutorial
   tutorialSlides:
-  - tutorialText: this is how you play
-    tutorialImage: {fileID: 21300000, guid: 5b04b6cda87224445bf3cb9ee1644818, type: 3}
-  - tutorialText: this is the challenge
-    tutorialImage: {fileID: 21300000, guid: eb053eeb6a34919428d5e08fcd1cb4b1, type: 3}
-  - tutorialText: this is how you overcome it
-    tutorialImage: {fileID: 21300000, guid: c7a676aa5803f4849a1bc1ede0ed6bf0, type: 3}
+  - tutorialText: When you open you kitchen, people will bring ingredients. You can
+      learn about their dislikes, what they need and what they can offer.
+    tutorialImage: {fileID: 21300000, guid: abc2f1de432327744b9afd291a66d46a, type: 3}
+  - tutorialText: Then you cook the soup. If you pick an ingredient that some person
+      doesn't like, they won't come to dinner
+    tutorialImage: {fileID: 21300000, guid: d7130d3c71dac494485faeed53613ead, type: 3}
+  - tutorialText: At dinner people who came exchange what they need and what they
+      can offer. Try to find all the matches!
+    tutorialImage: {fileID: 21300000, guid: 36feba14dfda26b40b6ec529e0fed46c, type: 3}
