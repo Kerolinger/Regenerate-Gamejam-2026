@@ -20,13 +20,14 @@ MonoBehaviour:
   skillNeeded: 1
   st01_ingredientText: Hi there! I have many leftover carrots for you, cause I got
     too many from the market.
-  st01_ingredientDislikeText: One thing I really dislike, is beetroots. I'm not rooting
+  st01_ingredientDislikeText: One thing I really dislike is beetroots. I'm not rooting
     for that beet.
-  st01_skillOfferText: 'I learned a lot about being a parent through the years. '
-  st01_skillNeedText: 'My kid, she had a fight with her friend in the community group.
-    And I don''t have anyone to leave her with, while I go to the doctor. '
+  st01_skillOfferText: 'I learned a lot about being a parent through the years. I
+    know how to help someone going through tough times. '
+  st01_skillNeedText: 'My kid had a fight with her friend in the community group.
+    And I don''t have anyone to leave her with while I go to the doctor. '
   st03_soupResultText: Oh wow! This soup is delicious.
   st03_skillOfferText: 'I could help with that! I know my way around with parent-kid
     communication. '
-  st03_skillNeedText: I keep thinking about my doctor appointment, and there is no
-    one to look out for my kid at the time.
+  st03_skillNeedText: I keep thinking about my doctor appointment, and no one will
+    be there to look out for my kid.

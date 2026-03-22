@@ -18,11 +18,11 @@ MonoBehaviour:
   ingredientDislikes: 0
   skillOffer: 1
   skillNeeded: 5
-  st01_ingredientText: 'Morning, some chillies for you?. To add the heat to the dish,
+  st01_ingredientText: 'Morning, some chillies for you? To add the heat to the dish,
     you know. '
-  st01_ingredientDislikeText: I could eat anything really, you know.
-  st01_skillOfferText: I loved spending time with my nieces, now they are all grown
-    up. I'm good with children, you know.
+  st01_ingredientDislikeText: I could eat anything, really, you know.
+  st01_skillOfferText: I loved spending time with my nieces when they were kids.
+    I'm good with children, you know.
   st01_skillNeedText: 'I want to put up this shelf, you know. But I need an extra
     durable drill, the walls are just too tough.  '
   st03_soupResultText: The spice, the flavour, the love. This soup is just what I
