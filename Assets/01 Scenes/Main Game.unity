@@ -1193,13 +1193,13 @@ MonoBehaviour:
   handTransform: {fileID: 2035520102}
   stageThreeContainer: {fileID: 998837882}
   peeperPos:
-  - {fileID: 855429736}
-  - {fileID: 855429735}
-  - {fileID: 855429734}
-  - {fileID: 855429735}
-  - {fileID: 855429736}
-  - {fileID: 855429735}
-  disableTutorial: 1
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  disableTutorial: 0
   stageTwomanager: {fileID: 1295346863}
 --- !u!1001 &748813333
 PrefabInstance:
@@ -1394,21 +1394,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bcf18e2fe64db2448b2cfa7163e931c, type: 3}
---- !u!4 &855429734 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1756822501826016056, guid: 7bcf18e2fe64db2448b2cfa7163e931c, type: 3}
-  m_PrefabInstance: {fileID: 855429733}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &855429735 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4292146447352104802, guid: 7bcf18e2fe64db2448b2cfa7163e931c, type: 3}
-  m_PrefabInstance: {fileID: 855429733}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &855429736 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6035076818556281106, guid: 7bcf18e2fe64db2448b2cfa7163e931c, type: 3}
-  m_PrefabInstance: {fileID: 855429733}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &864584098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2260,6 +2245,10 @@ PrefabInstance:
       propertyPath: ingredient3D
       value: 
       objectReference: {fileID: 896413244}
+    - target: {fileID: 2989599403635505345, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BTN_TutorialNext
+      objectReference: {fileID: 0}
     - target: {fileID: 3104212959879151710, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2369,6 +2358,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7054762116284135889, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7573714803372623771, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
       propertyPath: HoverText
       value: 'Beetroot from Qris''s dad. Qris cannot have a soup with potatoes.  '
@@ -2389,6 +2382,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 676289555}
+    - target: {fileID: 9112477921538448648, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BTN_ToggleTutorial
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
