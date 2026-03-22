@@ -83,25 +83,25 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ambienceTutorial
     clip: {fileID: 8300000, guid: d4dd1c307fd569d4588d11bc7ac1e704, type: 3}
-    volume: 1
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: ambienceStageOne
     clip: {fileID: 8300000, guid: cd205ccee8d68af4bbda3f587e0e7a35, type: 3}
-    volume: 0.5
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: ambienceStageTwo
-    clip: {fileID: 0}
-    volume: 0.5
+    clip: {fileID: 8300000, guid: 3f1e474ba9bc5c0469ca44c62aa9672f, type: 3}
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: ambienceStageThree
     clip: {fileID: 8300000, guid: 580158a526ab6d143ae2cdb5c6c6bb39, type: 3}
-    volume: 0.5
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -154,8 +154,8 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: doorBell
-    clip: {fileID: 8300000, guid: 67c7f69f7beac574f92bb131568d24e6, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 2ff654f4fb33075408c61a0f0783ac14, type: 3}
+    volume: 0.5
     pitch: 3
     loop: 0
     source: {fileID: 0}
@@ -179,7 +179,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: wholesomeTheme
     clip: {fileID: 8300000, guid: 6451a5c3bfe079042b0cacf4124327e1, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
