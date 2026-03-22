@@ -47,8 +47,8 @@ MonoBehaviour:
   sounds:
   - name: peeperPopup
     clip: {fileID: 8300000, guid: a259e8945927d594e84e87b0ddb6518a, type: 3}
-    volume: 1
-    pitch: 1
+    volume: 0.7
+    pitch: 1.5
     loop: 0
     source: {fileID: 0}
   - name: peeperLeave
@@ -101,7 +101,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ambienceStageThree
     clip: {fileID: 8300000, guid: 580158a526ab6d143ae2cdb5c6c6bb39, type: 3}
-    volume: 0.1
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -155,8 +155,8 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: doorBell
     clip: {fileID: 8300000, guid: 2ff654f4fb33075408c61a0f0783ac14, type: 3}
-    volume: 0.5
-    pitch: 3
+    volume: 0.7
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: doorOpen
@@ -167,8 +167,8 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: buttonBack
     clip: {fileID: 8300000, guid: 84b56b7678a82834c94e645a0d7415b4, type: 3}
-    volume: 1
-    pitch: 1
+    volume: 0.5
+    pitch: 1.4
     loop: 0
     source: {fileID: 0}
   - name: buttonConfirm
