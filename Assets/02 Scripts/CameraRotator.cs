@@ -48,6 +48,7 @@ public class CameraRotator : MonoBehaviour
     public void ChangeMouseRotation(bool willEnabled)
     {
         mouseInputBlocked = willEnabled;
+        Debug.Log("Camera Rotation is" + willEnabled);
         
     }
 }
