@@ -11,9 +11,22 @@ public class CameraRotator : MonoBehaviour
     private bool mouseInputBlocked;
 
     private float cameraYRotationStartingPosition;
-
+    public static CameraRotator instance;
     // Update is called once per frame
 
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+    }
     private void Start()
     {
         cameraYRotationStartingPosition = st01_camera.eulerAngles.y;

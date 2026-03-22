@@ -118,9 +118,9 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: tommyTalking
-    clip: {fileID: 8300000, guid: c2f2740320d72e74cbc4a60d874aadd0, type: 3}
+    clip: {fileID: 8300000, guid: 6eaedf04ec6e6674880a4d82dac37eae, type: 3}
     volume: 1
-    pitch: 1
+    pitch: 0.6
     loop: 0
     source: {fileID: 0}
   - name: qrisTalking
@@ -148,7 +148,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: georgyTalking
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: c2f2740320d72e74cbc4a60d874aadd0, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: buttonBack
+  - name: buttonConfirm
     clip: {fileID: 8300000, guid: 6eda0ab5d378f744aa539622dfcaeb3c, type: 3}
     volume: 1
     pitch: 1

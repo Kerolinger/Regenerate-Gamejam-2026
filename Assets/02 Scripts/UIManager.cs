@@ -59,6 +59,17 @@ public class UIManager : MonoBehaviour
 
     public enum ConversationFlow {introduction, intro_answer, intro_goodbye };
 
+    private const string buttonConfirm = "buttonConfirm";
+    private const string buttonBack = "buttonBack";
+
+    private const string linaTalking = "linaTalking";
+    private const string tommyTalking = "tommyTalking";
+    private const string qrisTalking = "qrisTalking";
+    private const string poTalking = "poTalking";
+    private const string maschaTalking = "maschaTalking";
+    private const string juneTalking = "juneTalking";
+    private const string georgyTalking = "georgyTalking";
+
     private void Start()
     {
         //currentTextSnippets = new List<string>();
@@ -73,11 +84,14 @@ public class UIManager : MonoBehaviour
         m_tutorialContainer.SetActive(true);
         currentTutorialslide = 0;
         UpdateTutorialPage();
+        CameraRotator.instance.ChangeMouseRotation(false);
+
     }
     public void BTN_TutorialBack()
     {
         currentTutorialslide--;
         UpdateTutorialPage();
+        AudioManager.instance.Play(buttonBack);
     }
 
     private void UpdateTutorialPage()
@@ -113,11 +127,16 @@ public class UIManager : MonoBehaviour
             m_tutorialNext.SetActive(false);
         else
             m_tutorialNext.SetActive(true);
+
+        AudioManager.instance.Play(buttonConfirm);
     }
 
     public void BTN_ToggleTutorial()
     {
         m_tutorialContainer.SetActive(!m_tutorialContainer.activeSelf);
+
+        if(!m_tutorialContainer.activeSelf)
+            CameraRotator.instance.ChangeMouseRotation(true);
     }
 
     #endregion
@@ -132,6 +151,47 @@ public class UIManager : MonoBehaviour
 
         m_DialoguePeeperName.text = newPeeper.Name;
         m_DialoguePeeperText.text = newTextSnippet;
+
+        CheckForName(newPeeper.Name);
+    }
+
+    private void CheckForName(string peeperName)
+    {
+        AudioManager.instance.Stop(tommyTalking);
+        AudioManager.instance.Stop(maschaTalking);
+        AudioManager.instance.Stop(juneTalking);
+        AudioManager.instance.Stop(qrisTalking);
+        AudioManager.instance.Stop(georgyTalking);
+        AudioManager.instance.Stop(poTalking);
+        AudioManager.instance.Stop(linaTalking);
+
+        switch (peeperName)
+        {
+            case "Thommy":
+                AudioManager.instance.Play(tommyTalking);
+                break;
+
+            case "Mascha":
+                AudioManager.instance.Play(maschaTalking);
+                break;
+
+            case "June":
+                AudioManager.instance.Play(juneTalking);
+                break;
+
+            case "Qris":
+                AudioManager.instance.Play(qrisTalking);
+                break;
+
+            case "Caro":
+                AudioManager.instance.Play(georgyTalking);
+                break;
+
+            case "Po and Lina":
+                AudioManager.instance.Play(poTalking);
+                AudioManager.instance.Play(linaTalking);
+                break;
+        }
     }
 
     public void BTN_QuestionSkill()
@@ -169,6 +229,7 @@ public class UIManager : MonoBehaviour
     {
         switch (gameManager.CurrentGameStage)
         {
+
             case GameManager.GameStage.stage01:
 
                 if(!hasSaidDislike)
@@ -203,11 +264,22 @@ public class UIManager : MonoBehaviour
                 {
                     m_ENDGAMEMAMA.SetActive(true);
                     m_DialogueOptionsContainer.SetActive(false);
+                    m_DialogueContainer.SetActive(false);
+                    CameraRotator.instance.ChangeMouseRotation(false);
+
+                    AudioManager.instance.Stop(tommyTalking);
+                    AudioManager.instance.Stop(maschaTalking);
+                    AudioManager.instance.Stop(juneTalking);
+                    AudioManager.instance.Stop(qrisTalking);
+                    AudioManager.instance.Stop(georgyTalking);
+                    AudioManager.instance.Stop(poTalking);
+                    AudioManager.instance.Stop(linaTalking);
                 }
                 else
                 {
                     m_DialoguePeeperName.text = stage03names[stage03currentTextIndex];
                     m_DialoguePeeperText.text = stage03dialogues[stage03currentTextIndex];
+                    CheckForName(stage03names[stage03currentTextIndex]);
                 }
 
                 break;
