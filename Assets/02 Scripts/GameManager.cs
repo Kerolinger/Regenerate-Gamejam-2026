@@ -42,10 +42,23 @@ public class GameManager : MonoBehaviour
 
     private List<IngredientInfo> CurrentSoup;
 
+    private const string ambienceTutorial = "ambienceTutorial";
+    private const string ambienceStageOne = "ambienceStageOne";
+    private const string ambienceStageTwo = "ambienceStageTwo";
+    private const string ambienceStageThree = "ambienceStageThree";
+    private const string peeperPopup = "peeperPopup";
+    private const string peeperLeave = "peeperLeave";
+    private const string doorBell = "doorBell";
+    private const string doorOpen = "doorOpen";
+
     private void Start()
     {
         if (!disableTutorial)
+        {
             uiManager.PlayTutorial();
+            AudioManager.instance.Play(ambienceTutorial);
+            AudioManager.instance.Play(ambienceStageOne);
+        }
 
         SwitchStage(1);
         CurrentSoup = new List<IngredientInfo>();
@@ -54,8 +67,10 @@ public class GameManager : MonoBehaviour
     private IEnumerator StartPeeperEncounterRoutine()
     {
         yield return new WaitForSeconds(Random.Range(1, 3f));
-        Debug.Log("Doorbell Sound!");
-        yield return new WaitForSeconds(Random.Range(1, 1.5f));
+        AudioManager.instance.Play(doorOpen);
+        yield return new WaitForSeconds(0.2f);
+        AudioManager.instance.Play(doorBell);
+        yield return new WaitForSeconds(Random.Range(0.7f, 1.2f));
 
         StartPeeperEncounter();
     }
@@ -67,6 +82,8 @@ public class GameManager : MonoBehaviour
 
     private void StartPeeperEncounter()
     {
+        AudioManager.instance.Play(peeperPopup);
+
         currentPeeper = Instantiate(peeperPrefab);
         currentPeeper.transform.position = new Vector3(5f, -5, 1f);
         currentPeeper.transform.DOMove(new Vector3(5f, 0, 1f), 0.5f ).SetEase(Ease.OutSine);
@@ -80,11 +97,12 @@ public class GameManager : MonoBehaviour
 
     public void RemovePeeper()
     {
+        AudioManager.instance.Play(peeperLeave);
         currentPeeper.transform.DOMove(new Vector3(5f, -5, 1f), 0.5f).SetEase(Ease.OutSine).OnComplete(() =>
         {
             Destroy(currentPeeper);
             currentPeeper = null;
-            Debug.Log("remove peeper: currentpeeperindex is " + currentPeeperIndex + "and length is" + peepers.Length);
+
             if (currentPeeperIndex >= peepers.Length)
             {
                 uiManager.DisplayStage02Button();
@@ -142,7 +160,12 @@ public class GameManager : MonoBehaviour
         switch (newStageindex)
         {
             case 1:
+
+                if (disableTutorial)
+                    AudioManager.instance.Play(ambienceStageOne);
+
                 CurrentGameStage = GameStage.stage01;
+                AudioManager.instance.FadeOut(ambienceTutorial, 0f);
 
                 currentCamera = cameraTransforms[0];
                 currentCameraCamera = currentCamera.GetComponentInChildren<Camera>();
@@ -167,6 +190,8 @@ public class GameManager : MonoBehaviour
                 break;
             case 2:
                 CurrentGameStage = GameStage.stage02;
+                AudioManager.instance.FadeOut(ambienceStageOne, 0f);
+                AudioManager.instance.Play(ambienceStageTwo);
                 currentCamera = cameraTransforms[1];
                 currentCameraCamera = currentCamera.GetComponentInChildren<Camera>();
                 cameraTransforms[0].gameObject.SetActive(false);
@@ -185,6 +210,8 @@ public class GameManager : MonoBehaviour
                 break;
             case 3:
 
+                AudioManager.instance.FadeOut(ambienceStageTwo, 0f);
+                AudioManager.instance.Play(ambienceStageThree);
                 StartCoroutine(SetStagethreetiming());
                 break;
         }
