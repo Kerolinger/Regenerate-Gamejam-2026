@@ -2184,6 +2184,12 @@ PrefabInstance:
       propertyPath: ingredient3D
       value: 
       objectReference: {fileID: 7624658465989335729}
+    - target: {fileID: 412731772238348895, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
+      propertyPath: m_text
+      value: "Today was full of sunshine and smiles at Soup Kitchen #154B.\_One soup
+        at a time builds the community. Open the kitchen again to have another cozy
+        dinner."
+      objectReference: {fileID: 0}
     - target: {fileID: 1352872673252467485, guid: e2053c987c037fa409b37df1fc7f77fd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
